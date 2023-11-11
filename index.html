@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Listado de Personas</title>
+</head>
+<body onload="mostrarPersonas()"> <!--Se utiliza el evento para cargar los archivos de objeto perosona al recargar la pagina tras tocar submit, recuperando el elemento personas en el elemento ul con id de personas-->
+    <header class="contenedor" id="cabecero">
+        <h1>LISTADO DE PERSONAS</h1>
+    </header>
+    <section class="contenedor">
+        <div class="elemento">
+        <ul id="personas"> <!--Ademas del ekemento css, el id personas hace referencia a el arreglo/objeto de js personas que contiene cada persona nueva que se carga(a su vez esta se asocia a el objeto persona)-->
+            <li></li>
+        </ul>
+        </div>
+    </section>
+
+    <section class="contenedor">
+        <form id="forma">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="apellido" placeholder="Apellido">
+        </form>
+        <div style="text-align: center;">
+        <div style="text-align: center;">
+            <button class="mica" style="cursor: pointer;" onclick="agregarPersona()">Agregar</button>
+            <h5 id="error"></h5>
+            <br>
+        </div>
+        </div>
+    </section>
+    <script src="js/persona.js"></script> <!--Los archivos JS que se deben agregar primero son aquellos que no tienen relacion con ningun otro archivo/clase de js(primero se agrega la base para que los demas archivos los reconozcan)-->
+    <script src="js/app.js"></script>
+</body>
+</html>
